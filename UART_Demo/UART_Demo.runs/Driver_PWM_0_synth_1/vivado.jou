@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Aug  1 12:43:56 2020
+# Process ID: 16184
+# Current directory: C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/Driver_PWM_0_synth_1
+# Command line: vivado.exe -log Driver_PWM_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Driver_PWM_0.tcl
+# Log file: C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/Driver_PWM_0_synth_1/Driver_PWM_0.vds
+# Journal file: C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/Driver_PWM_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Driver_PWM_0.tcl -notrace

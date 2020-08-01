@@ -1,0 +1,76 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Aug  1 16:03:27 2020
+| Host         : DESKTOP-TG4M2U6 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file UART_Demo_control_sets_placed.rpt
+| Design       : UART_Demo
+| Device       : xc7s15
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    19 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|     14 |            1 |
+|    16+ |            4 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              34 |            8 |
+| No           | No                    | Yes                    |              16 |           10 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               3 |            3 |
+| Yes          | No                    | Yes                    |              28 |           10 |
+| Yes          | Yes                   | No                     |              60 |           16 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+--------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|   Clock Signal   |                         Enable Signal                        |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++------------------+--------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|  i_clk_IBUF_BUFG | i_rst_IBUF                                                   |                                           |                3 |              3 |
+|  i_clk_IBUF_BUFG | UART0/UART0/UART_Rx0/data_cnt                                | UART0/UART0/UART_Tx0/i_rst                |                2 |              6 |
+|  i_clk_IBUF_BUFG | UART0/UART0/UART_Rx0/data_o[7]_i_1_n_0                       | UART0/UART0/UART_Tx0/i_rst                |                4 |              8 |
+|  i_clk_IBUF_BUFG | UART0/UART0/UART_Tx0/FSM_sequential_state_current[1]_i_1_n_0 | UART0/UART0/UART_Tx0/i_rst                |                4 |             14 |
+|  i_clk_IBUF_BUFG |                                                              | UART0/UART0/UART_Tx0/i_rst                |               10 |             16 |
+|  i_clk_IBUF_BUFG | i_rst_IBUF                                                   | UART0/UART0/UART_CLK/cnt[30]_i_1_n_0      |                8 |             30 |
+|  i_clk_IBUF_BUFG | i_rst_IBUF                                                   | UART0/UART0/UART_CLK_0/cnt[30]_i_1__0_n_0 |                8 |             30 |
+|  i_clk_IBUF_BUFG |                                                              |                                           |                8 |             34 |
++------------------+--------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,704 @@
+
+*** Running vivado
+    with args -log UART_Demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_Demo.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source UART_Demo.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Shinelon/Desktop/SEA-master/Examples/FPGA-IP/PWM-IP/IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top UART_Demo -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2028 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 465.137 ; gain = 100.172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'UART_Demo' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_PWM_0' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/synth_1/.Xil/Vivado-21792-DESKTOP-TG4M2U6/realtime/Driver_PWM_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_PWM_0' (1#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/synth_1/.Xil/Vivado-21792-DESKTOP-TG4M2U6/realtime/Driver_PWM_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'UART_Ctrl' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Ctrl.v:23]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_END bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'clk_division' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/clk_division.v:23]
+WARNING: [Synth 8-5788] Register cnt_reg in module clk_division is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/clk_division.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'clk_division' (2#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/clk_division.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_UART' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:24]
+	Parameter Default_BaudRate bound to: 9600 - type: integer 
+	Parameter CLK_Freq_MHZ bound to: 100 - type: integer 
+	Parameter Default_Factor bound to: 6250000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'UART_Rx' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:119]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_END bound to: 2'b10 
+WARNING: [Synth 8-5788] Register pulse_cnt_reg in module UART_Rx is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:154]
+WARNING: [Synth 8-5788] Register i_rx_buff_reg in module UART_Rx is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Rx' (3#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:119]
+INFO: [Synth 8-6157] synthesizing module 'UART_Tx' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:236]
+	Parameter ST_IDLE bound to: 2'b00 
+	Parameter ST_START bound to: 2'b01 
+	Parameter ST_SEND bound to: 2'b10 
+	Parameter ST_END bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Tx' (4#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:236]
+WARNING: [Synth 8-6014] Unused sequential element baudrate_i_reg was removed.  [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_UART' (5#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:24]
+INFO: [Synth 8-6157] synthesizing module 'UART_Package' [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Ctrl.v:156]
+	Parameter ST_IDLE bound to: 3'b000 
+	Parameter ST_HEAD bound to: 3'b001 
+	Parameter ST_NUM bound to: 3'b010 
+	Parameter ST_START bound to: 3'b011 
+	Parameter ST_END bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'UART_Package' (6#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Ctrl.v:156]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Ctrl' (7#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Ctrl.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Demo' (8#1) [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:23]
+WARNING: [Synth 8-3917] design UART_Demo has port o_gpio_en[1] driven by constant 1
+WARNING: [Synth 8-3917] design UART_Demo has port o_gpio_en[0] driven by constant 1
+WARNING: [Synth 8-3917] design UART_Demo has port o_src_en driven by constant 0
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[30]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[29]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[28]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[27]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[26]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[25]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[24]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[23]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[22]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[21]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[20]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[19]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[18]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[17]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[16]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[15]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[14]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[13]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[12]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[11]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[10]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[9]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[8]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[7]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[6]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[5]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[4]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[3]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[2]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[1]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[0]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[7]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[6]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[5]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[4]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[3]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[2]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[1]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 521.680 ; gain = 156.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 521.680 ; gain = 156.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 521.680 ; gain = 156.715
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/ip/Driver_PWM_0/Driver_PWM_0/Driver_PWM_0_in_context.xdc] for cell 'Driver_PWM0'
+Finished Parsing XDC File [c:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/ip/Driver_PWM_0/Driver_PWM_0/Driver_PWM_0_in_context.xdc] for cell 'Driver_PWM0'
+Parsing XDC File [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_Demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/UART_Demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.223 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 824.223 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.223 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 824.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 824.223 ; gain = 459.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 824.223 ; gain = 459.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Driver_PWM0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 824.223 ; gain = 459.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Rx'
+INFO: [Synth 8-5544] ROM "state_current" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pulse_cnt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ack_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Tx'
+INFO: [Synth 8-5544] ROM "state_current" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ack_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Package'
+INFO: [Synth 8-5544] ROM "tx_en_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_wr_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_current_reg' in module 'UART_Ctrl'
+INFO: [Synth 8-5544] ROM "en_package" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                              001 |                               00
+                ST_START |                              010 |                               01
+                  ST_END |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'UART_Rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               01 |                               00
+                ST_START |                               11 |                               01
+                 ST_SEND |                               10 |                               10
+                  ST_END |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'UART_Tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                            00001 |                              000
+                 ST_HEAD |                            00010 |                              001
+                  ST_NUM |                            00100 |                              010
+                ST_START |                            01000 |                              011
+                  ST_END |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'one-hot' in module 'UART_Package'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                               00 |                               00
+                ST_START |                               01 |                               01
+                  ST_END |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_current_reg' using encoding 'sequential' in module 'UART_Ctrl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 824.223 ; gain = 459.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 7     
+	   2 Input     31 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               31 Bit    Registers := 7     
+	                8 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   5 Input     31 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clk_division 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input     31 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module UART_Rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+Module UART_Tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+Module Driver_UART 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module UART_Package 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module UART_Ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "state_next" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+DSP Report: Generating DSP o_pulse2, operation Mode is: (A:0x2710)*B.
+DSP Report: operator o_pulse2 is absorbed into DSP o_pulse2.
+DSP Report: Generating DSP o_pulse0, operation Mode is: A*(B:0x3c).
+DSP Report: operator o_pulse0 is absorbed into DSP o_pulse0.
+WARNING: [Synth 8-3917] design UART_Demo has port o_gpio_en[1] driven by constant 1
+WARNING: [Synth 8-3917] design UART_Demo has port o_gpio_en[0] driven by constant 1
+WARNING: [Synth 8-3917] design UART_Demo has port o_src_en driven by constant 0
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[30]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[29]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[28]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[27]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[26]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[25]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[24]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[23]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[22]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[21]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[20]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[19]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[18]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[17]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[16]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[15]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[14]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[13]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[12]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[11]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[10]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[9]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[8]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[7]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[6]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[5]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[4]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[3]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[2]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[1]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_baudrate[0]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[7]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[6]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[5]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[4]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[3]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[2]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[1]
+WARNING: [Synth 8-3331] design Driver_UART has unconnected port i_tx_data[0]
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[7]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[5]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[3]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[1]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/head_i_reg[6]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/head_i_reg[4]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/head_i_reg[2]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/head_i_reg[0]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package_CLK/freq_num_reg[13]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package_CLK/freq_num_reg[10]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package_CLK/freq_num_reg[9]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package_CLK/freq_num_reg[8]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package_CLK/freq_num_reg[4]' (FDC) to 'UART0/UART0/set_baudrate_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/set_baudrate_i_reg[0]' (FDC) to 'UART0/UART0/UART_Rx0/en_i_reg'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_num_i_reg[2]' (FDC) to 'UART0/UART0/UART_Rx0/en_i_reg'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[1]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[2]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[3]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[4]' (FDPE) to 'UART0/UART0/clk_mode_reg[9]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[5]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[6]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[7]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[8]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[9]' (FDPE) to 'UART0/UART0/clk_mode_reg[10]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[10]' (FDPE) to 'UART0/UART0/clk_mode_reg[11]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[11]' (FDPE) to 'UART0/UART0/clk_mode_reg[12]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[12]' (FDPE) to 'UART0/UART0/clk_mode_reg[14]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[13]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[14]' (FDPE) to 'UART0/UART0/clk_mode_reg[16]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[15]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[16]' (FDPE) to 'UART0/UART0/clk_mode_reg[17]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[17]' (FDPE) to 'UART0/UART0/clk_mode_reg[18]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[18]' (FDPE) to 'UART0/UART0/clk_mode_reg[19]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[19]' (FDPE) to 'UART0/UART0/clk_mode_reg[20]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[20]' (FDPE) to 'UART0/UART0/clk_mode_reg[22]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[21]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\UART0/UART0/clk_mode_reg[22] )
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[23]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[24]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[25]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[26]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[27]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[28]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[29]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART0/clk_mode_reg[30]' (FDCE) to 'UART0/UART0/clk_mode_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\UART0/UART0/clk_mode_reg[0] )
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[6]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[4]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[2]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/end_i_reg[0]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[63]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[62]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[61]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[60]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[59]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[58]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[57]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[56]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[55]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[54]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[53]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[52]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[51]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[50]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[49]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[48]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[47]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[46]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[45]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[44]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[43]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[42]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[41]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[40]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[39]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[38]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[37]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[36]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[35]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[34]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[33]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[32]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[31]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[30]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[29]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[28]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[27]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[26]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[25]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[24]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[23]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[22]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[21]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[20]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[19]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[18]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[17]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[16]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[15]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[14]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[13]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'UART0/UART_Package0/data_i_reg[12]' (FDC) to 'UART0/UART0/UART_CLK/freq_num_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\UART0/UART0/UART_CLK_0/freq_num_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Package0/FSM_onehot_state_current_reg[4]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Package0/FSM_onehot_state_current_reg[3]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Package0/FSM_onehot_state_current_reg[2]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Package0/FSM_onehot_state_current_reg[1]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/UART_Package0/FSM_onehot_state_current_reg[0]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/FSM_sequential_state_current_reg[1]) is unused and will be removed from module UART_Demo.
+WARNING: [Synth 8-3332] Sequential element (UART0/FSM_sequential_state_current_reg[0]) is unused and will be removed from module UART_Demo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 824.223 ; gain = 459.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Driver_UART | (A:0x2710)*B | 8      | 14     | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Driver_UART | A*(B:0x3c)   | 19     | 6      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 874.309 ; gain = 509.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 876.156 ; gain = 511.191
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:152]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |Driver_PWM_0  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |Driver_PWM_0 |     1|
+|2     |BUFG         |     1|
+|3     |CARRY4       |    71|
+|4     |DSP48E1      |     1|
+|5     |DSP48E1_1    |     1|
+|6     |LUT1         |     9|
+|7     |LUT2         |    87|
+|8     |LUT3         |   146|
+|9     |LUT4         |    61|
+|10    |LUT5         |    45|
+|11    |LUT6         |   106|
+|12    |FDCE         |    40|
+|13    |FDPE         |     4|
+|14    |FDRE         |    64|
+|15    |IBUF         |     3|
+|16    |OBUF         |     5|
++------+-------------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------+------+
+|      |Instance         |Module         |Cells |
++------+-----------------+---------------+------+
+|1     |top              |               |   645|
+|2     |  UART0          |UART_Ctrl      |   635|
+|3     |    UART0        |Driver_UART    |   635|
+|4     |      UART_CLK   |clk_division   |    91|
+|5     |      UART_CLK_0 |clk_division_0 |    91|
+|6     |      UART_Rx0   |UART_Rx        |    40|
+|7     |      UART_Tx0   |UART_Tx        |    42|
++------+-----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 953.027 ; gain = 285.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 953.027 ; gain = 588.063
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 953.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+161 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 953.027 ; gain = 600.090
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 953.027 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Shinelon/Desktop/UART_Demo_1/UART_Demo/UART_Demo.runs/synth_1/UART_Demo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file UART_Demo_utilization_synth.rpt -pb UART_Demo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  1 16:02:03 2020...
